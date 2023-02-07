@@ -113,14 +113,21 @@
             <li class="menu-item">
               <a href="{{ route('buyer.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Analytics">Buy</div>
+                <div data-i18n="Analytics">Buyer</div>
               </a>
             </li>
 
             <li class="menu-item">
               <a href="{{ route('seller.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Analytics">Sell</div>
+                <div data-i18n="Analytics">Seller</div>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="{{ route('service.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div data-i18n="Analytics">Service</div>
               </a>
             </li>
 

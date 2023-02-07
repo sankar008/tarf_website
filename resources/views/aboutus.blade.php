@@ -42,7 +42,7 @@
                         </div>
                         
                         <div class="btn-wrapper animated" data-aos="zoom-in" data-aos-duration="3000">
-                            <a href="#" class="theme-btn-1 btn btn-effect-1">Learn More</a>
+                            <!-- <a href="#" class="theme-btn-1 btn btn-effect-1">Learn More</a> -->
                         </div>
                     </div>
                 </div>

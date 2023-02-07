@@ -42,7 +42,7 @@ class BuyerController extends Controller
             $data['image_2'] = $image2;
         }
 
-        $aboutus = \App\Models\Aboutus::first();
+        $aboutus = \App\Models\Buyer::first();
         $aboutus -> fill($data);
         $aboutus -> save();
         return redirect() -> route('buyer.list')->with('success', "Data has been updated successfully!");

@@ -5,7 +5,10 @@ use Illuminate\Http\Request;
 use Auth;
 class AdminController extends Controller
 {
-    
+    /*
+        Use for admin login.
+        Check the registered Email id and password with bcrypt method.
+    */
     public function login(Request $request){
        if($request -> method() == "POST"){  
         
@@ -30,7 +33,7 @@ class AdminController extends Controller
         }
     }
 
-
+    // Used to show admin dashboard.
     public function dashboard(Request $request){
         if($request -> method() == "POST"){
 

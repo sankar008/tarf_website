@@ -58,4 +58,11 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get("/buyer/update", [App\Http\Controllers\BuyerController::class, 'updatebuyer'])->middleware('admin.auth') -> name("buyer.update");
     Route::post("/buyer/update", [App\Http\Controllers\BuyerController::class, 'updatebuyer'])->middleware('admin.auth') -> name("buyer.update.success");
 
+    Route::get("/service/list", [App\Http\Controllers\ServiceController::class, 'servicelist'])->middleware('admin.auth')->name('service.list');
+    Route::get("/service/add", [App\Http\Controllers\ServiceController::class, 'serviceadd'])->middleware('admin.auth')->name('service.add');
+    Route::post("/service/add", [App\Http\Controllers\ServiceController::class, 'serviceadd'])->middleware('admin.auth')->name('service.add.success');
+    Route::get("/service/update", [App\Http\Controllers\ServiceController::class, 'serviceupdate'])->middleware('admin.auth')->name('service.update');
+    Route::post("/service/update", [App\Http\Controllers\ServiceController::class, 'serviceupdate'])->middleware('admin.auth')->name('service.update.success');
+    Route::get("/service/delete", [App\Http\Controllers\ServiceController::class, 'servicedelete'])->middleware('admin.auth')->name('service.delete');
+
 }); 
