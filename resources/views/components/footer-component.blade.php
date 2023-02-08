@@ -1,3 +1,6 @@
+@php 
+    $companyDetails = getCompany();   
+@endphp
   <!-- CALL TO ACTION START (call-to-action-6) -->
   <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--" data-aos="fade-down" data-aos-duration="3000">
         <div class="container">
@@ -28,7 +31,7 @@
                                     <img src="{{ asset('fontassets/img/logo-2.png') }}" style="width:40%" alt="Logo">
                                 </div>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+                            <p>{{ $companyDetails -> short_details }}</p>
                             <div class="footer-address">
                                 <ul>
                                     <li>
@@ -36,7 +39,7 @@
                                             <i class="icon-placeholder"></i>
                                         </div>
                                         <div class="footer-address-info">
-                                            <p>405 The west mall, Suite 910, Etobicoke, On M9C 5J1</p>
+                                            <p>{{ $companyDetails -> address }}</p>
                                         </div>
                                     </li>
                                     <li>
@@ -44,7 +47,7 @@
                                             <i class="icon-call"></i>
                                         </div>
                                         <div class="footer-address-info">
-                                            <p><a href="tel:+0123-456789">+0123-456789</a></p>
+                                            <p><a href="tel:{{ $companyDetails -> mobile_no }}">{{ $companyDetails -> mobile_no }}</a></p>
                                         </div>
                                     </li>
                                   
@@ -52,10 +55,10 @@
                             </div>
                             <div class="ltn__social-media mt-20">
                                 <ul>
-                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="{{  $companyDetails -> facebook_link }}" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="{{  $companyDetails -> twitter_link }}" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="{{  $companyDetails -> linkedin_link }}" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="{{  $companyDetails -> youtube_link }}" title="Youtube"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

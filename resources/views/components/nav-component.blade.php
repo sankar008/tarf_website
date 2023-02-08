@@ -131,6 +131,13 @@
               </a>
             </li>
 
+            <li class="menu-item">
+              <a href="{{ route('benifit.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-file"></i>
+                <div data-i18n="Analytics">Benefit</div>
+              </a>
+            </li>
+
             
             <!-- <li class="menu-item">
               <a href="#" class="menu-link menu-toggle">

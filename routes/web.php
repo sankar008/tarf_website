@@ -61,8 +61,15 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get("/service/list", [App\Http\Controllers\ServiceController::class, 'servicelist'])->middleware('admin.auth')->name('service.list');
     Route::get("/service/add", [App\Http\Controllers\ServiceController::class, 'serviceadd'])->middleware('admin.auth')->name('service.add');
     Route::post("/service/add", [App\Http\Controllers\ServiceController::class, 'serviceadd'])->middleware('admin.auth')->name('service.add.success');
-    Route::get("/service/update", [App\Http\Controllers\ServiceController::class, 'serviceupdate'])->middleware('admin.auth')->name('service.update');
+    Route::get("/service/update/{id}", [App\Http\Controllers\ServiceController::class, 'serviceupdate'])->middleware('admin.auth')->name('service.update');
     Route::post("/service/update", [App\Http\Controllers\ServiceController::class, 'serviceupdate'])->middleware('admin.auth')->name('service.update.success');
-    Route::get("/service/delete", [App\Http\Controllers\ServiceController::class, 'servicedelete'])->middleware('admin.auth')->name('service.delete');
+    Route::get("/service/delete/{id}", [App\Http\Controllers\ServiceController::class, 'servicedelete'])->middleware('admin.auth')->name('service.delete');
+    
+    Route::get("/benefit/list", [App\Http\Controllers\BenifitController::class, 'benifitlist'])->middleware('admin.auth')->name('benifit.list');
+    Route::get("/benefit/add", [App\Http\Controllers\BenifitController::class, 'benifitadd'])->middleware('admin.auth')->name('benifit.add');
+    Route::post("/benefit/add", [App\Http\Controllers\BenifitController::class, 'benifitadd'])->middleware('admin.auth')->name('benifit.add.success');
+    Route::get("/benefit/update/{id}", [App\Http\Controllers\BenifitController::class, 'benifitupdate'])->middleware('admin.auth')->name('benifit.update');
+    Route::post("/benefit/update", [App\Http\Controllers\BenifitController::class, 'benifitupdate'])->middleware('admin.auth')->name('benifit.update.success');
+    Route::get("/benefit/delete/{id}", [App\Http\Controllers\BenifitController::class, 'benifitdelete'])->middleware('admin.auth')->name('benifit.delete');
 
 }); 

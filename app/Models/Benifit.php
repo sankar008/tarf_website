@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Benifit extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'details', 'image'];
+    protected $fillable = ['title', 'details'];
 }

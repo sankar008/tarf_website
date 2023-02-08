@@ -27,8 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $data = \App\Models\User::where('is_active', "1")->limit(4)->get();      
-        return view('home', ['data' => $data]);
+        $data = \App\Models\User::where('is_active', "1")->limit(4)->get(); 
+        $service = \App\Models\Service::limit(3) -> get();     
+        return view('home', ['data' => $data, 'service' => $service]);
     }
 
     /*

@@ -284,44 +284,20 @@
                 </div>
             </div>
             <div class="row ltn__custom-gutter--- justify-content-center">
+                @foreach($service as $val)
                 <div class="col-lg-4 col-sm-6 col-12">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
-                            <img src="{{ asset('fontassets/img/icons/icon-img/21.png') }}" alt="#">
+                            <img src="{{ asset($val -> image) }}" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Buy a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="buy.php">Find A Home <i class="flaticon-right-arrow"></i></a>
+                            <h3><a href="javascript:void(0)">{{ $val -> title }}</a></h3>
+                            <p>{!! $val -> details !!}</p>
+                            <a class="ltn__service-btn" href="{{ route('buy') }}">Find A Home <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
-                        <div class="ltn__feature-icon">
-                            <!-- <span><i class="flaticon-house-3"></i></span> -->
-                            <img src="{{ asset('fontassets/img/icons/icon-img/22.png') }}" alt="#">
-                        </div>
-                        <div class="ltn__feature-info">
-                            <h3><a href="buy.php">Rent a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="buy.php">Find A Home <i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
-                        <div class="ltn__feature-icon">
-                            <!-- <span><i class="flaticon-deal-1"></i></span> -->
-                            <img src="{{ asset('fontassets/img/icons/icon-img/23.png') }}" alt="#">
-                        </div>
-                        <div class="ltn__feature-info">
-                            <h3><a href="buy.php">Sell a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="buy.php">Find A Home <i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

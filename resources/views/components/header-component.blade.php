@@ -1,9 +1,12 @@
+@php 
+    $companyDetails = getCompany();   
+@endphp
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ str_replace("_", " ", config('app.name')) }}</title>
+    <title>{{ str_replace("_", " ",  $companyDetails-> name) }}</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,8 +42,8 @@
                     <div class="col-md-7">
                         <div class="ltn__top-bar-menu">
                             <ul>
-                                <li><a href="mailto:info@trafrealty.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>info@tarfrealty.com</a></li>
-                                <li><a href="#"><i class="icon-placeholder"></i>405 The west mall, Suite 910, Etobicoke, On M9C 5J1</a></li>
+                                <li><a href="mailto:info@trafrealty.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>{{  $companyDetails -> email }}</a></li>
+                                <li><a href="#"><i class="icon-placeholder"></i>{{  $companyDetails -> address }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -69,11 +72,10 @@
                                         <!-- ltn__social-media -->
                                         <div class="ltn__social-media">
                                             <ul>
-                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                                                
-                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+                                                <li><a href="{{  $companyDetails -> facebook_link }}" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="{{  $companyDetails -> twitter_link }}" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="{{  $companyDetails -> linkedin_link }}" title="Instagram"><i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="{{  $companyDetails -> youtube_link }}" title="Dribbble"><i class="fab fa-youtube"></i></a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -99,7 +101,7 @@
                     <div class="col">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.php"><img src="{{ asset('fontassets/img/logo.png') }}" style="width:40%" alt="Logo"></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset($companyDetails ->image) }}" style="width:40%" alt="Logo"></a>
                             </div>
                             <div class="get-support clearfix d-none">
                                 <div class="get-support-icon">
