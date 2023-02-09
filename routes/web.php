@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = \App\Models\User::where('is_active', "1")->limit(4)->get();    
-    return view('home', ['data' => $data]);
+   return redirect() -> route('home');
 });
 
 Auth::routes();

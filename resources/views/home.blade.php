@@ -215,32 +215,41 @@
 
     <div class="ltn__team-area pt-110--- pt-5 section-bg-1">
         <div class="container">
+            
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
                     <h1 class="section-title" data-aos="fade-right" data-aos-duration="3000">Our Agents</h1>
                 </div>
-                @foreach($data as $val)
-                <div class="col-lg-4 col-sm-6">
-                    <div class="ltn__team-item ltn__team-item-3---">
-                        <div class="team-img">
-                            <img src="{{ asset($val -> image) }}" alt="Image">
-                        </div>
-                        <div class="team-info">
-                            <h4><a href="#">{{ $val -> name }}</a></h4>
-                            <h6 class="ltn__secondary-color">{{ $val -> email }}</h6>
-                            <h6 class="ltn__secondary-color">+1{{ $val -> mobile_no }}</h6>
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                    @foreach($data as $val)
+                    <div class="item">
+                        <div class="">
+                            <div class="ltn__team-item ltn__team-item-3---">
+                                <div class="team-img">
+                                    <img src="{{ asset($val -> image) }}" alt="Image">
+                                </div>
+                                <div class="team-info">
+                                    <h4><a href="#">{{ $val -> name }}</a></h4>
+                                    <h6 class="ltn__secondary-color">{{ $val -> email }}</h6>
+                                    <h6 class="ltn__secondary-color">+1{{ $val -> mobile_no }}</h6>
 
-                            <!-- <div class="ltn__social-media">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                </ul>
-                            </div> -->
+                                    <!-- <div class="ltn__social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    @endforeach     
+                        
+                    </div>
                 </div>
-                @endforeach               
+                          
             </div>
         </div>
     </div>
