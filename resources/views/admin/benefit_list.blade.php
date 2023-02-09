@@ -36,7 +36,7 @@
                                 <a class="dropdown-item" href="{{ route('benifit.update', ['id' => $val -> id ]) }}"><i class="bx bx-edit-alt me-1"></i>Edit</a>  
                             </td>
                             <td>
-                                <a class="dropdown-item" href="{{ route('benifit.delete', ['id' => $val -> id ]) }}"><i class="bx bx-trash me-1"></i>Delete</a>  
+                                <a class="dropdown-item" onclick="return confirm('Are you really want to delete this data.')" href="{{ route('benifit.delete', ['id' => $val -> id ]) }}"><i class="bx bx-trash me-1"></i>Delete</a>  
                             </td>
                         </tr> 
                         @endforeach                                       

@@ -25,6 +25,7 @@ Route::get('/buy', [App\Http\Controllers\HomeController::class, 'buy'])-> name('
 Route::get('/sell', [App\Http\Controllers\HomeController::class, 'sell'])->name('sell');
 Route::get('/why-us', [App\Http\Controllers\HomeController::class, 'whyus'])->name('whyus');
 Route::get('/find-and-agent', [App\Http\Controllers\HomeController::class, 'findandagent'])->name('findandagent');
+Route::get('/agent', [App\Http\Controllers\HomeController::class, 'agent'])->name('agent');
 
 Route::get('/admin', function () {
     return view('admin.login');

@@ -14,7 +14,7 @@
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="btn-wrapper">
-                        <a href="why-us.php" class="theme-btn-1 btn reverse-color btn-block" type="submit">Why Us</a>
+                        <a href="{{ route('whyus') }}" class="theme-btn-1 btn reverse-color btn-block" type="submit">Why Us</a>
                     </div>
                 </div>
                 <div class="ltn__slide-item-inner text-left d-none">
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>William
                 </div>
             </div>
         </div>
@@ -204,7 +204,7 @@
                         </div>
                         
                         <div class="btn-wrapper animated" data-aos="zoom-in" data-aos-duration="3000">
-                            <a href="about.php" class="theme-btn-1 btn btn-effect-1">Learn More</a>
+                            <a href="{{ route('aboutus') }}" class="theme-btn-1 btn btn-effect-1">Learn More</a>
                         </div>
                     </div>
                 </div>

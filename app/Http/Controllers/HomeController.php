@@ -77,4 +77,9 @@ class HomeController extends Controller
         $whyus = \App\Models\Whyus::first();
         return view('whyus', ['data' => $whyus]);
     }
+
+    public function agent(){
+        $agent = \App\Models\User::get();
+        return view("agent", ['data' => $agent]);
+    }
 }

@@ -129,7 +129,7 @@
                                         </li>
                                         <li class="menu-icon"><a href="#">Agent</a>
                                             <ul>
-                                                <li><a href="#">Training</a></li>
+                                                <li><a href="{{ route('agent') }}">Our Agent</a></li>
                                                 <li><a href="#">Tb1</a></li>
                                                 <li><a href="#">Tb2</a></li>
                                                 <li><a href="#">Tb3</a></li>
