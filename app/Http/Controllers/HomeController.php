@@ -28,8 +28,10 @@ class HomeController extends Controller
     public function index()
     {   
         $data = \App\Models\User::where('is_active', "1")->get(); 
-        $service = \App\Models\Service::limit(3) -> get();     
-        return view('home', ['data' => $data, 'service' => $service]);
+        $service = \App\Models\Service::limit(3) -> get();    
+        $slider = \App\Models\Slider::first(); 
+        $homedata = \App\Models\Home::first();
+        return view('home', ['data' => $data, 'service' => $service, 'slider' => $slider, 'homedata' => $homedata]);
     }
 
     /*

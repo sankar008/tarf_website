@@ -72,4 +72,10 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post("/benefit/update", [App\Http\Controllers\BenifitController::class, 'benifitupdate'])->middleware('admin.auth')->name('benifit.update.success');
     Route::get("/benefit/delete/{id}", [App\Http\Controllers\BenifitController::class, 'benifitdelete'])->middleware('admin.auth')->name('benifit.delete');
 
+    Route::get("/slider/update", [App\Http\Controllers\SliderController::class, 'updateSlider'])->middleware('admin.auth') -> name('slider.update');
+    Route::post("/slider/update", [App\Http\Controllers\SliderController::class, 'updateSlider'])->middleware('admin.auth') -> name('slider.update.success');
+
+    Route::get("/home/update", [App\Http\Controllers\AdminHomeController::class, 'updateHome'])->middleware('admin.auth') -> name('home.update');
+    Route::post("/home/update", [App\Http\Controllers\AdminHomeController::class, 'updateHome'])->middleware('admin.auth') -> name('home.update.success');
+
 }); 

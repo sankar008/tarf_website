@@ -40,9 +40,7 @@ class AdminController extends Controller
         }else{
             return view("admin.dashboard", ['sale_gross' => 0, 'sale_net' => 0, 
                                             'upsale_gross' => 0, 'upsale_net' => 0, 'collection' => 0,
-                                            'sales' => [],
-                                            'upsales' => [],
-                                            'collections' => []
+                                            'agent' => \App\Models\User::get()
                                            ]);
         }
     }

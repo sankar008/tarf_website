@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 08, 2023 at 12:55 PM
+-- Generation Time: Feb 10, 2023 at 11:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -44,7 +44,7 @@ CREATE TABLE `aboutuses` (
 --
 
 INSERT INTO `aboutuses` (`id`, `title_1`, `title_2`, `details_1`, `details_2`, `image_1`, `image_2`, `created_at`, `updated_at`) VALUES
-(1, 'Buying your next home.', 'Agents You Can Trust', '<p>Whether you are buying your first home or searching for your next one, Tarf Realty is here for you every step of the way. From financial tips to informative listings about a specific area, we are here to make this exciting season as easy as possible.</p><p>Your local Tarf agents are ready to walk with you from that initial search all the way Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '<p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country.</p><p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 'uploads/1675251436.jpg', 'uploads/1675251436.png', '2023-02-01 12:26:20', '2023-02-01 06:21:34');
+(1, 'Buying your next home.', 'Agents You Can Trust', '<p>Whether you are buying your first home or searching for your next one, Tarf Realty is here for you every step of the way. From financial tips to informative listings about a specific area, we are here to make this exciting season as easy as possible.</p><p>Your local Tarf agents are ready to walk with you from that initial search all the way Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '<p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country.</p><p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 'uploads/1675251436.jpg', 'uploads/1675251436.png', '2023-02-01 12:26:20', '2023-02-10 09:52:07');
 
 -- --------------------------------------------------------
 
@@ -158,6 +158,31 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `homes`
+--
+
+CREATE TABLE `homes` (
+  `id` int(11) NOT NULL,
+  `title_1` varchar(250) NOT NULL,
+  `title_2` varchar(250) NOT NULL,
+  `details_1` text NOT NULL,
+  `details_2` text NOT NULL,
+  `image_1` varchar(250) NOT NULL,
+  `image_2` varchar(250) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `homes`
+--
+
+INSERT INTO `homes` (`id`, `title_1`, `title_2`, `details_1`, `details_2`, `image_1`, `image_2`, `created_at`, `updated_at`) VALUES
+(1, 'Buying your next home. home', 'Agents You Can Trust', '<p>Whether you are buying your first home or searching for your next one, Tarf Realty is here for you every step of the way. From financial tips to informative listings about a specific area, we are here to make this exciting season as easy as possible.</p><p>Your local Tarf agents are ready to walk with you from that initial search all the way Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', '<p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country.</p><p>At Tarf Realty, you&rsquo;re working with some of the most forward-thinking professionals that real estate has to offer. Through our one-of-a-kind Cloud Office Environment, our agents collaborate with industry experts nationwide, so that you can know you&rsquo;re receiving the highest quality service across the country. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>', 'uploads/1675251436.jpg', 'uploads/1675251436.png', '2023-02-01 12:26:20', '2023-02-10 04:21:49');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -261,6 +286,28 @@ INSERT INTO `services` (`id`, `title`, `details`, `image`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sliders`
+--
+
+CREATE TABLE `sliders` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `details` text NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sliders`
+--
+
+INSERT INTO `sliders` (`id`, `title`, `details`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur', 'incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'uploads/1676015209.jpg', '2023-02-10 08:41:08', '2023-02-10 03:56:59');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -284,7 +331,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `mobile_no`, `image`, `details`, `is_active`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'Rosalina D. William', 'tia.williams@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55');
+(1, 'Rosalina D. William', 'tia.william9s@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55'),
+(2, 'Rosalina D. William', 'tia.william90s@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55'),
+(4, 'Rosalina D. William', 'tia.williams@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55'),
+(5, 'Rosalina D. William', 'tia.williamis@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55'),
+(6, 'Rosalina D. William', 'tia.william8s@exprealty.com', '0123456789', 'uploads/1675183444.jpg', '<p><strong><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em></strong></p>', '1', NULL, NULL, NULL, '2023-01-31 11:14:04', '2023-02-01 05:36:55');
 
 -- --------------------------------------------------------
 
@@ -351,6 +402,12 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `homes`
+--
+ALTER TABLE `homes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -380,6 +437,12 @@ ALTER TABLE `sellers`
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sliders`
+--
+ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -436,6 +499,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `homes`
+--
+ALTER TABLE `homes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -460,10 +529,16 @@ ALTER TABLE `services`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `sliders`
+--
+ALTER TABLE `sliders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `whyuses`

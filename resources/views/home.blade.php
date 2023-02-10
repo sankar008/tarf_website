@@ -3,15 +3,11 @@
        <div class="ltn__slider-area ltn__slider-4">
         <div class="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-4 bg-image bg-overlay-theme-black-60" style="background-image:url('{{ asset('fontassets/img/slider/11.jpg')}}')">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-4 bg-image bg-overlay-theme-black-60" style="background-image:url('{{ asset($slider -> image)}}')">
                 <div class="bannerContant">
-                    <h2>Lorem ipsum dolor sit amet, consectetur </h2>
+                    <h2>{{ $slider -> title }}</h2>
                     <p class="text-white text-center">
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      {!! $slider -> details !!}
                     </p>
                     <div class="btn-wrapper">
                         <a href="{{ route('whyus') }}" class="theme-btn-1 btn reverse-color btn-block" type="submit">Why Us</a>
@@ -180,7 +176,7 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="{{ asset('fontassets/img/ab.jpg') }}" alt="About Us Image" data-aos="fade-up"
+                        <img src="{{ $homedata -> image_1 }}" alt="About Us Image" data-aos="fade-up"
      data-aos-duration="3000">
                         <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3">
                             
@@ -192,15 +188,8 @@
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-20">
                             <h6 data-aos="fade-down" data-aos-duration="3000" class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
-                            <h1 class="section-title" data-aos="fade-right" data-aos-duration="3000">Buying your next home<span>.</span></h1>
-                            <p data-aos="fade-up" data-aos-duration="3000">Whether you are buying your first home or searching for your next one, Tarf Realty is here for you every step of the way. From financial tips to informative listings about a specific area, we are here to make this exciting season as easy as possible. </p>
-                            <p data-aos="fade-down" data-aos-duration="3000">
-                            Your local Tarf agents are ready to walk with you from that initial search all the way Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h1 class="section-title" data-aos="fade-right" data-aos-duration="3000">{{ $homedata -> title_1 }}<span>.</span></h1>
+                            {!! $homedata -> details_1 !!}
                         </div>
                         
                         <div class="btn-wrapper animated" data-aos="zoom-in" data-aos-duration="3000">
@@ -233,7 +222,6 @@
                                     <h4><a href="#">{{ $val -> name }}</a></h4>
                                     <h6 class="ltn__secondary-color">{{ $val -> email }}</h6>
                                     <h6 class="ltn__secondary-color">+1{{ $val -> mobile_no }}</h6>
-
                                     <!-- <div class="ltn__social-media">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -260,11 +248,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-us-info-wrap">
-                        <div class="section-title-area ltn__section-title-2--- mb-30">
-                           
-                            <h1 data-aos="fade-right" data-aos-duration="3000" class="section-title">Selling your home</h1>
-                            <p data-aos="fade-up" data-aos-duration="3000">Selling your home requires just as much care as buying one, and Tarf Realty is on your side from the decision to sell all the way to closing. Whether you are looking to increase curb appeal or maximize profitability, we have all the tips and tricks for selling your home with ease. Your local experts at Tarf are here to help make your selling experience as smooth as possible.</p>
-                            <p data-aos="fade-up" data-aos-duration="3000">Selling your home requires just as much care as buying one, and Tarf Realty is on your side from the decision to sell all the way to closing. Whether you are looking to increase curb appeal or maximize profitability, we have all the tips and tricks for selling your home with ease. Your local experts at Tarf are here to help make your selling experience as smooth as possible.</p>
+                        <div class="section-title-area ltn__section-title-2--- mb-30">                           
+                            <h1 data-aos="fade-right" data-aos-duration="3000" class="section-title">{{ $homedata -> title_2 }}</h1>
+                            {!! $homedata -> details_2 !!}
                         </div>
                         <div class="btn-wrapper animated" data-aos="zoom-in" data-aos-duration="3000">
                             <a href="buy.php" class="theme-btn-1 btn btn-effect-1">Learn More</a>
@@ -273,7 +259,7 @@
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-right">
-                        <img src="{{ asset('fontassets/img/bigstock.jpg') }}" alt="About Us Image" data-aos="zoom-in" data-aos-duration="3000">
+                        <img src="{{ asset($homedata -> image_2) }}" alt="About Us Image" data-aos="zoom-in" data-aos-duration="3000">
                     </div>
                 </div>
             </div>
